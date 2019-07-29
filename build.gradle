@@ -103,7 +103,7 @@ minecraft {
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'gb', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'globalbase', '--all', '--output', file('src/generated/resources/')
 
             mods {
                 gb {

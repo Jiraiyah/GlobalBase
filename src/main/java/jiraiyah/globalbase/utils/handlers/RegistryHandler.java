@@ -1,14 +1,8 @@
-package jiraiyah.gb.utils.handlers;
+package jiraiyah.globalbase.utils.handlers;
 
-import jiraiyah.gb.Main;
-import jiraiyah.gb.Reference;
-import jiraiyah.gb.infrastructure.bases.GenericItemGroup;
-import net.minecraft.client.renderer.model.ModelResourceLocation;
+import jiraiyah.globalbase.Main;
+import jiraiyah.globalbase.Reference;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static jiraiyah.gb.Reference.Items.Names.*;
-import static jiraiyah.gb.Reference.Items.Names.GOLD;
+import static jiraiyah.globalbase.Reference.Items.Names.*;
+import static jiraiyah.globalbase.Reference.Items.Names.GOLD;
 
 @Mod.EventBusSubscriber
 public class RegistryHandler

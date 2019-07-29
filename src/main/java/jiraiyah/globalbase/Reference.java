@@ -1,8 +1,8 @@
-package jiraiyah.gb;
+package jiraiyah.globalbase;
 
 public class Reference
 {
-    public static final String MODID = "gb";
+    public static final String MODID = "globalbase ";
     //static final String NAME = "Global Base";
     static final String VERSION = "1.0";
 	

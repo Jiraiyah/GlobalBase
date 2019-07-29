@@ -1,6 +1,6 @@
-package jiraiyah.gb.inits;
+package jiraiyah.globalbase.inits;
 
-import jiraiyah.gb.Reference;
+import jiraiyah.globalbase.Reference;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

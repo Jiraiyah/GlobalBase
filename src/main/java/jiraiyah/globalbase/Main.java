@@ -1,6 +1,6 @@
-package jiraiyah.gb;
+package jiraiyah.globalbase;
 
-import jiraiyah.gb.infrastructure.bases.GenericItemGroup;
+import jiraiyah.globalbase.infrastructure.bases.GenericItemGroup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
