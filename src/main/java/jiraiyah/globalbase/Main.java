@@ -1,6 +1,5 @@
 package jiraiyah.globalbase;
 
-import jiraiyah.globalbase.infrastructure.bases.GenericItemGroup;
 import jiraiyah.globalbase.inits.BaseItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
