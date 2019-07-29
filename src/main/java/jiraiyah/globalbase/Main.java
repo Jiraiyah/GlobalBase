@@ -1,6 +1,7 @@
 package jiraiyah.globalbase;
 
 import jiraiyah.globalbase.infrastructure.bases.GenericItemGroup;
+import jiraiyah.globalbase.inits.BaseItems;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
@@ -21,13 +22,13 @@ public class Main
 	
 	public static Main INSTANCE;
 
-    public static final GenericItemGroup DUST_TAB = new GenericItemGroup(Reference.Items.DUST_PREFIX);
-    public static final GenericItemGroup GEAR_TAB = new GenericItemGroup(Reference.Items.GEAR_PREFIX);
-    public static final GenericItemGroup INGOT_TAB = new GenericItemGroup(Reference.Items.INGOT_PREFIX);
-    public static final GenericItemGroup NUGGET_TAB = new GenericItemGroup(Reference.Items.NUGGET_PREFIX);
-    public static final GenericItemGroup PLATE_TAB = new GenericItemGroup(Reference.Items.PLATE_PREFIX);
-    public static final GenericItemGroup REINFORCED_TAB = new GenericItemGroup(Reference.Items.REINFORCED_PREFIX);
-    public static final GenericItemGroup ROD_TAB = new GenericItemGroup(Reference.Items.ROD_PREFIX);
+    public static final GenericItemGroup DUST_TAB = new GenericItemGroup(Reference.Items.DUST_PREFIX).setIcon(BaseItems.Dusts.ALUMITE);
+    public static final GenericItemGroup GEAR_TAB = new GenericItemGroup(Reference.Items.GEAR_PREFIX).setIcon(BaseItems.Gears.ALUMITE);
+    public static final GenericItemGroup INGOT_TAB = new GenericItemGroup(Reference.Items.INGOT_PREFIX).setIcon(BaseItems.Ingots.ALUMITE);
+    public static final GenericItemGroup NUGGET_TAB = new GenericItemGroup(Reference.Items.NUGGET_PREFIX).setIcon(BaseItems.Nuggets.ALUMITE);
+    public static final GenericItemGroup PLATE_TAB = new GenericItemGroup(Reference.Items.PLATE_PREFIX).setIcon(BaseItems.Plates.ALUMITE);
+    public static final GenericItemGroup REINFORCED_TAB = new GenericItemGroup(Reference.Items.REINFORCED_PREFIX).setIcon(BaseItems.Reinforced.ALUMITE);
+    public static final GenericItemGroup ROD_TAB = new GenericItemGroup(Reference.Items.ROD_PREFIX).setIcon(BaseItems.Rods.ALUMITE);
 
     public Main()
     {

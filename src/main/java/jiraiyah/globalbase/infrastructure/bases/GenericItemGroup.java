@@ -17,14 +17,16 @@ public class GenericItemGroup extends ItemGroup
         this.label = label;
     }
 
-    public void setIcon(Block block)
+    public GenericItemGroup setIcon(Block block)
     {
         this.block = block;
+        return this;
     }
 
-    public void setIcon(Item item)
+    public GenericItemGroup setIcon(Item item)
     {
         this.item = item;
+        return this;
     }
 
     @Override
