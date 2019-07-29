@@ -2,7 +2,10 @@ package jiraiyah.globalbase;
 
 import jiraiyah.globalbase.infrastructure.bases.GenericItemGroup;
 import jiraiyah.globalbase.inits.BaseItems;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -22,18 +25,67 @@ public class Main
 	
 	public static Main INSTANCE;
 
-    public static final GenericItemGroup DUST_TAB = new GenericItemGroup(Reference.Items.DUST_PREFIX).setIcon(BaseItems.Dusts.ALUMITE);
-    public static final GenericItemGroup GEAR_TAB = new GenericItemGroup(Reference.Items.GEAR_PREFIX).setIcon(BaseItems.Gears.ALUMITE);
-    public static final GenericItemGroup INGOT_TAB = new GenericItemGroup(Reference.Items.INGOT_PREFIX).setIcon(BaseItems.Ingots.ALUMITE);
-    public static final GenericItemGroup NUGGET_TAB = new GenericItemGroup(Reference.Items.NUGGET_PREFIX).setIcon(BaseItems.Nuggets.ALUMITE);
-    public static final GenericItemGroup PLATE_TAB = new GenericItemGroup(Reference.Items.PLATE_PREFIX).setIcon(BaseItems.Plates.ALUMITE);
-    public static final GenericItemGroup REINFORCED_TAB = new GenericItemGroup(Reference.Items.REINFORCED_PREFIX).setIcon(BaseItems.Reinforced.ALUMITE);
-    public static final GenericItemGroup ROD_TAB = new GenericItemGroup(Reference.Items.ROD_PREFIX).setIcon(BaseItems.Rods.ALUMITE);
+    public static final ItemGroup DUST_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Dusts.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup GEAR_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Gears.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup INGOT_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Ingots.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup NUGGET_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Nuggets.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup PLATE_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Plates.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup REINFORCED_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Reinforced.ALUMITE);
+        }
+    };
+
+    public static final ItemGroup ROD_TAB = new ItemGroup(Reference.MODID) {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(BaseItems.Rods.ALUMITE);
+        }
+    };
 
     public Main()
     {
         INSTANCE = this;
 		//PROXY = DistExecutor.runForDist(() -> () -> new Client(), () -> () -> new Server());
+        MinecraftForge.EVENT_BUS.register(this);
     }
 	
 	public static String getVersion() {

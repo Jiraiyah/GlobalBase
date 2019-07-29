@@ -37,7 +37,7 @@ public class GenericItemGroup extends ItemGroup
         if (block != null)
             return new ItemStack(block);
 
-        return super.getIcon();
+        return null;
     }
 
     @Override

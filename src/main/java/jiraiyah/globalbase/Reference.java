@@ -2,7 +2,7 @@ package jiraiyah.globalbase;
 
 public class Reference
 {
-    public static final String MODID = "globalbase ";
+    public static final String MODID = "globalbase";
     //static final String NAME = "Global Base";
     static final String VERSION = "1.0";
 	

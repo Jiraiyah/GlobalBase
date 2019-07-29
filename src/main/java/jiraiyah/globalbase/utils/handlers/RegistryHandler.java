@@ -2,7 +2,10 @@ package jiraiyah.globalbase.utils.handlers;
 
 import jiraiyah.globalbase.Main;
 import jiraiyah.globalbase.Reference;
+import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,7 +18,7 @@ import java.util.Objects;
 import static jiraiyah.globalbase.Reference.Items.Names.*;
 import static jiraiyah.globalbase.Reference.Items.Names.GOLD;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryHandler
 {
     public static final List<Item> SUB_ITEMS = new ArrayList<>();
@@ -61,8 +64,7 @@ public class RegistryHandler
             ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(tmp, "inventory"));
         }
         for (Item item : ITEMS)
-            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(
-                    Objects.requireNonNull(item.getRegistryName()), "inventory"));
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 
         //TODO : Register Block Models
     }*/
@@ -73,7 +75,6 @@ public class RegistryHandler
     private static void registerItem(Item item, String name, IForgeRegistry<Item> registry)
     {
         item.setRegistryName(name);
-        item.setRegistryName(Objects.requireNonNull(item.getRegistryName()).toString());
 
         /*if(isSubFolder)
             SUB_ITEMS.add(item);
