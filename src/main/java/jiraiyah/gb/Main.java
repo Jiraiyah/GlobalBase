@@ -1,11 +1,7 @@
 package jiraiyah.gb;
 
-import jiraiyah.gb.infrastructure.interfaces.IProxy;
-import jiraiyah.gb.infrastructure.proxies.Client;
-import jiraiyah.gb.infrastructure.proxies.Server;
-import jiraiyah.gb.infrastructure.proxies.SideProxy;
+import jiraiyah.gb.infrastructure.bases.GenericItemGroup;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -24,18 +20,27 @@ public class Main
 	public static final Random random = new Random();
 	
 	public static Main INSTANCE;
-	public static IProxy PROXY;
 
-    public Main() {
+    public static final GenericItemGroup DUST_TAB = new GenericItemGroup(Reference.Items.DUST_PREFIX);
+    public static final GenericItemGroup GEAR_TAB = new GenericItemGroup(Reference.Items.GEAR_PREFIX);
+    public static final GenericItemGroup INGOT_TAB = new GenericItemGroup(Reference.Items.INGOT_PREFIX);
+    public static final GenericItemGroup NUGGET_TAB = new GenericItemGroup(Reference.Items.NUGGET_PREFIX);
+    public static final GenericItemGroup PLATE_TAB = new GenericItemGroup(Reference.Items.PLATE_PREFIX);
+    public static final GenericItemGroup REINFORCED_TAB = new GenericItemGroup(Reference.Items.REINFORCED_PREFIX);
+    public static final GenericItemGroup ROD_TAB = new GenericItemGroup(Reference.Items.ROD_PREFIX);
+
+    public Main()
+    {
         INSTANCE = this;
-		PROXY = DistExecutor.runForDist(() -> () -> new Client(), () -> () -> new Server());
+		//PROXY = DistExecutor.runForDist(() -> () -> new Client(), () -> () -> new Server());
     }
 	
 	public static String getVersion() {
         return getVersion(false);
     }
 
-    public static String getVersion(boolean correctInDev) {
+    public static String getVersion(boolean correctInDev)
+    {
         Optional<? extends ModContainer> o = ModList.get().getModContainerById(Reference.MODID);
         if (o.isPresent()) {
             String str = o.get().getModInfo().getVersion().toString();
@@ -46,7 +51,8 @@ public class Main
         return "0.0.0";
     }
 	
-	public static boolean isDevBuild() {
+	public static boolean isDevBuild()
+    {
         String version = getVersion(false);
         return "NONE".equals(version);
     }
