@@ -43,15 +43,15 @@ public class RegistryHandler
         for (String name : Materials)
         {
             if(!name.equals(GLOW_STONE))
-                registerItem(new Item(new Item.Properties().group(Main.DUST_TAB)), Reference.Items.DUST_PREFIX + "/" + Reference.Items.DUST_PREFIX + "_" + name, registry);
-            registerItem(new Item(new Item.Properties().group(Main.GEAR_TAB)), Reference.Items.GEAR_PREFIX + "/" + Reference.Items.GEAR_PREFIX + "_" + name, registry);
+                registerItem(new Item(new Item.Properties().group(Main.DUST_TAB)), Reference.Items.DUST_PREFIX + "_" + name, registry);
+            registerItem(new Item(new Item.Properties().group(Main.GEAR_TAB)), Reference.Items.GEAR_PREFIX + "_" + name, registry);
             if(!name.equals(IRON) && !name.equals(GOLD))
-                registerItem(new Item(new Item.Properties().group(Main.INGOT_TAB)), Reference.Items.INGOT_PREFIX + "/" + Reference.Items.INGOT_PREFIX + "_" + name, registry);
+                registerItem(new Item(new Item.Properties().group(Main.INGOT_TAB)), Reference.Items.INGOT_PREFIX + "_" + name, registry);
             if(!name.equals(IRON) && !name.equals(GOLD))
-                registerItem(new Item(new Item.Properties().group(Main.NUGGET_TAB)), Reference.Items.NUGGET_PREFIX + "/" + Reference.Items.NUGGET_PREFIX + "_" + name, registry);
-            registerItem(new Item(new Item.Properties().group(Main.PLATE_TAB)), Reference.Items.PLATE_PREFIX + "/" + Reference.Items.PLATE_PREFIX + "_" + name, registry);
-            registerItem(new Item(new Item.Properties().group(Main.REINFORCED_TAB)), Reference.Items.REINFORCED_PREFIX + "/" + Reference.Items.REINFORCED_PREFIX + "_" + name, registry);
-            registerItem(new Item(new Item.Properties().group(Main.ROD_TAB)), Reference.Items.ROD_PREFIX + "/" + Reference.Items.ROD_PREFIX + "_" + name, registry);
+                registerItem(new Item(new Item.Properties().group(Main.NUGGET_TAB)), Reference.Items.NUGGET_PREFIX + "_" + name, registry);
+            registerItem(new Item(new Item.Properties().group(Main.PLATE_TAB)), Reference.Items.PLATE_PREFIX + "_" + name, registry);
+            registerItem(new Item(new Item.Properties().group(Main.REINFORCED_TAB)), Reference.Items.REINFORCED_PREFIX + "_" + name, registry);
+            registerItem(new Item(new Item.Properties().group(Main.ROD_TAB)), Reference.Items.ROD_PREFIX + "_" + name, registry);
         }
         registerItem(new Item(new Item.Properties().group(Main.INGOT_TAB)), "item_wax", registry);
     }
