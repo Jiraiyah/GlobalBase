@@ -3,7 +3,6 @@ package jiraiyah.globalbase.inits;
 import jiraiyah.globalbase.Reference;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
-//import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BaseItems
 {

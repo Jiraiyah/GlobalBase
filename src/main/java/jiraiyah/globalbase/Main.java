@@ -24,7 +24,7 @@ public class Main
 	
 	public static Main INSTANCE;
 
-    public static final ItemGroup DUST_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup DUST_TAB = new ItemGroup(Reference.MODID + ".dust") {
         @Override
         public ItemStack createIcon()
         {
@@ -32,7 +32,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup GEAR_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup GEAR_TAB = new ItemGroup(Reference.MODID + ".gear") {
         @Override
         public ItemStack createIcon()
         {
@@ -40,7 +40,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup INGOT_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup INGOT_TAB = new ItemGroup(Reference.MODID + ".ingot") {
         @Override
         public ItemStack createIcon()
         {
@@ -48,7 +48,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup NUGGET_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup NUGGET_TAB = new ItemGroup(Reference.MODID + ".nugget") {
         @Override
         public ItemStack createIcon()
         {
@@ -56,7 +56,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup PLATE_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup PLATE_TAB = new ItemGroup(Reference.MODID + ".plate") {
         @Override
         public ItemStack createIcon()
         {
@@ -64,7 +64,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup REINFORCED_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup REINFORCED_TAB = new ItemGroup(Reference.MODID + ".reinforced") {
         @Override
         public ItemStack createIcon()
         {
@@ -72,7 +72,7 @@ public class Main
         }
     };
 
-    public static final ItemGroup ROD_TAB = new ItemGroup(Reference.MODID) {
+    public static final ItemGroup ROD_TAB = new ItemGroup(Reference.MODID + ".rod") {
         @Override
         public ItemStack createIcon()
         {
